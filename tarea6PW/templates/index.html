@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD Flask</title>
+    <style>
+        table {
+            border: 2px solid black;
+            border-collapse: collapse;
+            margin: auto; /* Centra la tabla */
+            font-size: 20px; /* Cambia el tamaño de letra */
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: powderblue;
+        }
+
+        form { 
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">LISTA DE USUARIOS</h1>
+    <form action="/add_user" method="post">
+       Nombre: <input type="text" name="name" placeholder="Nombre" required>
+       Email: <input type="email" name="email" placeholder="Correo" required>
+       <button type="submit">Agregar</button>
+    </form>
+
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Acciones</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user[0] }}</td>
+            <td>{{ user[1] }}</td>
+            <td>{{ user[2] }}</td>
+            <td>
+                <form action="/update_user/{{ user[0] }}" method="post" style="display:inline;">
+                    <input type="text" name="name" value="{{ user[1] }}">
+                    <input type="email" name="email" value="{{ user[2] }}">
+                    <a href="/edit/{{ user[0] }}">Editar</a>
+                    <a href="/delete/{{ user[0] }}">Eliminar</a>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
