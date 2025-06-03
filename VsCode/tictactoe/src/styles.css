@@ -1,9 +1,0 @@
-.square {
-  width: 30px;  /* Ajusta el ancho */
-  height: 30px; /* Ajusta la altura */
-  font-size:15px; /* Tamaño del texto */
-}
-
-.board-row {
-  display: flex;
-}
