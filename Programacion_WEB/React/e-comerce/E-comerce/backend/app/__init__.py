@@ -3,6 +3,7 @@ from flask_cors import CORS
 from .db import db
 from .routes import register_routes
 from flask_jwt_extended import JWTManager
+from .config import Config
 
 def create_app():
     app = Flask(__name__)
