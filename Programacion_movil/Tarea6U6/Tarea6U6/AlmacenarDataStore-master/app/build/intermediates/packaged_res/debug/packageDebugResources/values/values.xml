@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_medium">16dp</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <string name="app_name">Dessert Release</string>
+    <string name="grid_layout_toggle">Grid layout</string>
+    <string name="linear_layout_toggle">Linear layout</string>
+    <string name="top_bar_name">Android Dessert Release</string>
+    <style name="Theme.DessertRelease" parent="android:Theme.Material.Light.NoActionBar"/>
+</resources>

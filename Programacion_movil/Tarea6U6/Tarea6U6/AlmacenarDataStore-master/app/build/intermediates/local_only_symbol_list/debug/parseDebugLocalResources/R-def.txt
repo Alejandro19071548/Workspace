@@ -1,0 +1,15 @@
+R_DEF: Internal format may change without notice
+local
+dimen padding_medium
+dimen padding_small
+drawable ic_grid_layout
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable ic_linear_layout
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string grid_layout_toggle
+string linear_layout_toggle
+string top_bar_name
+style Theme.DessertRelease
