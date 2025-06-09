@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registros guardados</title>
+</head>
+<body>
+    <h2>Lista de personas registradas</h2>
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+        </tr>
+        {% for row in records %}
+<tr>
+    <td>{{ row[1] }}</td>  <!-- name -->
+    <td>{{ row[2] }}</td>  <!-- age -->
+</tr>
+{% endfor %}
+    </table>
+    <br>
+    <a href="/form">Volver al formulario</a>
+</body>
+</html>
